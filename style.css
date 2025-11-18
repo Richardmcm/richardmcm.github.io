@@ -173,6 +173,45 @@ main {
   margin-bottom: 15px;
 }
 
+/* ----------------------------- */
+/*  SKILLS SECTION               */
+/* ----------------------------- */
+
+#skills {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.skill-item {
+  padding: 10px 18px;
+  background: #f3f3f3;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.skill-item:hover {
+  background: #e6e6e6;
+  border-color: #bbb;
+  transform: translateY(-3px);
+}
+
 
 /* ================================================================== */
 /*  PROSJEKTER – CARD-STIL  */
