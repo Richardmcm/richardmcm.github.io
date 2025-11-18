@@ -186,6 +186,26 @@
   <footer>
     <p>&copy; 2025 Richard McMillan</p>
   </footer>
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-visible");
+          // Slutt å observere når animasjonen er trigget en gang
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  document.querySelectorAll(".reveal-on-scroll").forEach((el) => {
+    observer.observe(el);
+  });
+</script>
 
 </body>
 
