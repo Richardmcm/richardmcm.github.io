@@ -387,7 +387,33 @@ footer {
   font-size: 2rem;
   cursor: pointer;
 }
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(15, 23, 42, 0.7);
+  color: #e5e7eb;
+  font-size: 2.2rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.lightbox-prev {
+  left: -50px;
+}
+
+.lightbox-next {
+  right: -50px;
+}
+
+.lightbox-arrow:hover {
+  background: rgba(37, 99, 235, 0.9);
+}
 /* ================================================================== */
 /*  SCROLL FADE-IN ANIMASJON                                         */
 /* ================================================================== */
