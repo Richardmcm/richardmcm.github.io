@@ -13,7 +13,7 @@ body {
   background: #f8f9fb;
   color: #111827;
   line-height: 1.6;
-  padding-top: 110px; /* plass til header */
+  padding-top: 110px;
 }
 
 /* ================================================================== */
@@ -88,8 +88,6 @@ body {
   width: 100%;
 }
 
-/* Sosiale ikoner */
-
 .social-icons {
   display: flex;
   align-items: center;
@@ -117,7 +115,7 @@ body {
 }
 
 /* ================================================================== */
-/*  SEKSJONER                                                          */
+/*  SECTION STANDARDER                                                */
 /* ================================================================== */
 
 section {
@@ -158,7 +156,7 @@ h2 {
 }
 
 /* ================================================================== */
-/*  PROSJEKTER – NYE KORT MED HOVER                                    */
+/*  PROSJEKTER – BLÅ GLOSSY HOVER                                     */
 /* ================================================================== */
 
 .projects h2 {
@@ -173,17 +171,22 @@ h2 {
 
 .project-card {
   position: relative;
-  background: #ffffff;
   border-radius: 14px;
   padding: 18px 20px 16px;
-  border: 1px solid rgba(148, 163, 184, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.6);
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+
+  /* nøkkelpunkt */
+  background: transparent;
+  overflow: hidden;
+
   transition:
     transform 0.22s ease,
     box-shadow 0.22s ease,
     border-color 0.22s ease;
 }
 
+/* Glossy blå overlay */
 .project-card::before {
   content: "";
   position: absolute;
@@ -191,15 +194,25 @@ h2 {
   border-radius: inherit;
   background: linear-gradient(
     135deg,
-    rgba(30, 58, 138, 0.25),  /* dyp blå, transparent */
-    rgba(59, 130, 246, 0.15), /* lys blå shine */
-    rgba(17, 24, 39, 0.35)    /* glossy mørk tone */
+    rgba(30, 58, 138, 0.25),
+    rgba(59, 130, 246, 0.18),
+    rgba(17, 24, 39, 0.40)
   );
   opacity: 0;
-  z-index: -1;
+  z-index: 0;
   transition: opacity 0.25s ease;
 }
 
+/* Teksten ligger over gradienten */
+.project-card > * {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 2px 2px 4px;
+}
+
+/* Hover-effekt */
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 36px rgba(30, 64, 175, 0.25);
@@ -210,6 +223,7 @@ h2 {
   opacity: 1;
 }
 
+/* Tekststiler */
 .project-card h3 {
   margin-bottom: 10px;
   font-size: 1.1rem;
@@ -228,7 +242,7 @@ h2 {
 }
 
 /* ================================================================== */
-/*  SKILLS – MODERNE GLASSY CARDS                                      */
+/*  SKILLS – GLASSY CARDS                                             */
 /* ================================================================== */
 
 #skills h2 {
