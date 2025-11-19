@@ -224,8 +224,9 @@
     <p>&copy; 2025 Richard McMillan</p>
   </footer>
 
-  <!-- Scroll reveal script -->
+  <!-- Scroll reveal + Lightbox script -->
   <script>
+    // Scroll reveal animasjon
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -241,8 +242,51 @@
     document.querySelectorAll(".reveal-on-scroll").forEach((el) => {
       observer.observe(el);
     });
+
+    // Lightbox for prosjektbilder
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxClose = document.querySelector(".lightbox-close");
+
+    // Åpne lightbox ved klikk på et galleri-bilde
+    document.querySelectorAll(".project-gallery img").forEach((img) => {
+      img.addEventListener("click", () => {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt || "";
+        lightbox.classList.add("open");
+      });
+    });
+
+    // Lukkeknapp
+    lightboxClose.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightboxImage.src = "";
+    });
+
+    // Lukk ved klikk utenfor bildet
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        lightbox.classList.remove("open");
+        lightboxImage.src = "";
+      }
+    });
+
+    // Lukk med ESC
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox.classList.contains("open")) {
+        lightbox.classList.remove("open");
+        lightboxImage.src = "";
+      }
+    });
   </script>
 
-</body>
+  <!-- Lightbox element -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Lukk bilde">&times;</button>
+      <img id="lightbox-image" src="" alt="">
+    </div>
+  </div>
 
+</body>
 </html>
