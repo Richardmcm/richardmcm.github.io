@@ -202,12 +202,12 @@ h2 {
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(245, 245, 247, 0.2);
+  box-shadow: 0 16px 36px rgba(30, 64, 175, 0.25);
   border-color: transparent;
 }
 
 .project-card:hover::before {
-  opacity: 0.1;
+  opacity: 1;
 }
 
 .project-card h3 {
