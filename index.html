@@ -171,15 +171,20 @@
         <article class="project-card reveal-on-scroll">
           <h3>AI til å oppdage syklige blodceller</h3>
           <p>
-            Prosjekt der jeg jobbet med å trene og teste ulike AI-modeller for å gjenkjenne sykelige celler på
-            mikroskopbilder, for å støtte leger i diagnostisering. Bildene under viser grensesnittet til nettsiden
-            jeg lagde for å visualisere resultatene – fra første versjon til mer ferdig løsning.
+            Prosjekt der jeg trente og evaluerte AI-modeller for å gjenkjenne sykelige celler på mikroskopbilder,
+            for å støtte leger i diagnostisering. Bildene under viser utviklingen av grensesnittet for løsningen.
           </p>
 
           <div class="project-gallery">
-            <img src="sc1.png" alt="Første versjon av AI-grensesnittet">
-            <img src="sc2.png" alt="Videreutviklet visning av analyseresultater">
-            <img src="sc3.png" alt="Endelig versjon av løsningen for celleanalyse">
+            <img src="sc1.png"
+                 alt="Første versjon av AI-grensesnittet"
+                 data-caption="Startside der ansatte kan laste opp ett eller flere blodcellebilder for analyse.">
+            <img src="sc2.png"
+                 alt="Videreutviklet UI for analyseresultater"
+                 data-caption="Etter opplasting kan de starte kategorisering eller nullstille valgte bilder.">
+            <img src="sc3.png"
+                 alt="Endelig versjon av kategoriseringsresultat"
+                 data-caption="Resultatside som viser hvor syklige cellene er (kategori 1–3) som støtte i videre behandling.">
           </div>
 
           <p class="project-tech">
@@ -222,10 +227,8 @@
   <footer>
     <p>&copy; 2025 Richard McMillan</p>
   </footer>
-<!-- ========================================================== -->
- <!-- ========================================================== -->
-  <!-- ========================================================== -->
 
+  <!-- LIGHTBOX OVERLAY -->
   <div id="lightbox" class="lightbox">
     <div class="lightbox-content">
       <button class="lightbox-close" aria-label="Lukk bilde">&times;</button>
@@ -238,10 +241,15 @@
 
       <!-- Høyre pil -->
       <button class="lightbox-arrow lightbox-next" aria-label="Neste bilde">&#10095;</button>
+
+      <!-- Caption + counter -->
+      <div class="lightbox-meta">
+        <p id="lightbox-caption"></p>
+        <p id="lightbox-counter"></p>
+      </div>
     </div>
   </div>
 
-  <!-- Scroll reveal + Lightbox script -->
   <!-- Scroll reveal + Lightbox script -->
   <script>
     // Scroll reveal
@@ -261,26 +269,31 @@
       observer.observe(el);
     });
 
-    // Lightbox + galleri for prosjektbilder
+    // Lightbox + galleri
     const lightbox = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightbox-image");
     const lightboxClose = document.querySelector(".lightbox-close");
     const prevButton = document.querySelector(".lightbox-prev");
     const nextButton = document.querySelector(".lightbox-next");
+    const captionEl = document.getElementById("lightbox-caption");
+    const counterEl = document.getElementById("lightbox-counter");
 
-    // Alle bilder i prosjektgalleriene (sc1, sc2, sc3 osv.)
-    const galleryImages = Array.from(document.querySelectorAll(".project-gallery img"));
+    let currentGallery = [];
     let currentIndex = 0;
 
     function showImage(index) {
-      if (!galleryImages.length) return;
-      currentIndex = (index + galleryImages.length) % galleryImages.length; // wrap rundt
-      const img = galleryImages[currentIndex];
+      if (!currentGallery.length) return;
+      const total = currentGallery.length;
+      currentIndex = (index + total) % total; // wrap rundt
+      const img = currentGallery[currentIndex];
       lightboxImage.src = img.src;
       lightboxImage.alt = img.alt || "";
+      captionEl.textContent = img.dataset.caption || "";
+      counterEl.textContent = `${currentIndex + 1} / ${total}`;
     }
 
-    function openLightbox(index) {
+    function openLightbox(index, galleryImages) {
+      currentGallery = galleryImages;
       showImage(index);
       lightbox.classList.add("open");
     }
@@ -288,12 +301,17 @@
     function closeLightbox() {
       lightbox.classList.remove("open");
       lightboxImage.src = "";
+      captionEl.textContent = "";
+      counterEl.textContent = "";
     }
 
-    // Klikk på thumbnails -> åpne lightbox på riktig bilde
-    galleryImages.forEach((img, index) => {
-      img.addEventListener("click", () => {
-        openLightbox(index);
+    // Koble thumbnails til lightbox, per galleri
+    document.querySelectorAll(".project-gallery").forEach((gallery) => {
+      const images = Array.from(gallery.querySelectorAll("img"));
+      images.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          openLightbox(index, images);
+        });
       });
     });
 
@@ -314,14 +332,14 @@
       closeLightbox();
     });
 
-    // Klikk utenfor bildet (på mørk bakgrunn) -> lukk
+    // Klikk på mørk bakgrunn -> lukk
     lightbox.addEventListener("click", (event) => {
       if (event.target === lightbox) {
         closeLightbox();
       }
     });
 
-    // Tastatur: ESC, venstre/høyre piltast
+    // Tastaturkontroller
     document.addEventListener("keydown", (event) => {
       if (!lightbox.classList.contains("open")) return;
 
