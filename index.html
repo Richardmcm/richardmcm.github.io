@@ -37,7 +37,7 @@
       </nav>
 
       <div class="header-right">
-        <a href="CV, Richard McMillan.pdf" class="cv-button" download>Last ned CV</a>
+        <a href="CV-improved.html" class="cv-button" target="_blank">Last ned CV</a>
         <div class="social-icons">
           <a href="https://github.com/Richardmcm" target="_blank" class="icon" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -90,7 +90,7 @@
           maskinlæring, automatisering og dataanalyse.
         </p>
         <div class="hero-cta">
-          <a href="CV, Richard McMillan.pdf" class="btn btn-primary" download>Last ned CV</a>
+          <a href="CV-improved.html" class="btn btn-primary" target="_blank">Last ned CV</a>
           <a href="#contact" class="btn btn-ghost">Ta kontakt →</a>
         </div>
       </div>
@@ -149,18 +149,106 @@
     <!-- PROSJEKTER -->
     <section id="projects">
       <div class="container">
-        <div class="section-tag">Utvalgte arbeider</div>
-        <h2 class="section-heading">Prosjekter</h2>
+        <div class="proj-tag">Utvalgte arbeider</div>
+        <h2 class="proj-heading">Prosjekter</h2>
+        <p class="proj-intro">Et utvalg av prosjekter innen AI, maskinlæring og automatisering.</p>
+
+        <!-- Animated stat counters -->
+        <div class="stats-row">
+          <div class="stat-block">
+            <div class="stat-number" data-target="85" data-suffix="%">0%</div>
+            <div class="stat-label">Nøyaktighet</div>
+            <div class="stat-sublabel">AI-modell · blodceller</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-block">
+            <div class="stat-number" data-target="97" data-suffix="%">0%</div>
+            <div class="stat-label">Tidsbesparelse</div>
+            <div class="stat-sublabel">UiPath-automatisering</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-block">
+            <div class="stat-number" data-target="4" data-suffix="">0</div>
+            <div class="stat-label">Prosjekter</div>
+            <div class="stat-sublabel">Fullført &amp; dokumentert</div>
+          </div>
+        </div>
 
         <div class="projects-grid">
 
+          <!-- FEATURED: AI blood cell — most impressive AI project -->
+          <article class="project-card project-featured reveal-on-scroll">
+            <div class="proj-meta">
+              <span class="proj-num">01</span>
+              <div class="stat-pills">
+                <span class="stat-pill stat-green">↑ 85% nøyaktighet</span>
+                <span class="stat-pill stat-blue">AI · Computer Vision</span>
+              </div>
+            </div>
+            <div class="project-featured-body">
+              <div class="project-featured-text">
+                <h3>AI-modell for gjenkjenning av syklige blodceller</h3>
+                <p>
+                  Trente og evaluerte AI-modeller for å gjenkjenne syklige celler på mikroskopbilder,
+                  beregnet til å støtte leger i diagnostisering. Inkluderte utvikling av et
+                  webgrensesnitt for opplasting og visualisering av resultater.
+                </p>
+                <div class="project-tags">
+                  <span class="tag" style="--tc:#3776AB">Python</span>
+                  <span class="tag" style="--tc:#F97316">Maskinlæring</span>
+                  <span class="tag" style="--tc:#8B5CF6">Computer Vision</span>
+                  <span class="tag" style="--tc:#F37726">Jupyter</span>
+                </div>
+              </div>
+              <div class="project-gallery project-gallery--featured">
+                <!-- Main screenshot in a browser chrome -->
+                <div class="browser-mockup">
+                  <div class="browser-bar">
+                    <div class="browser-dots"><span></span><span></span><span></span></div>
+                    <div class="browser-url">cell-detection.app / upload</div>
+                  </div>
+                  <img src="sc1.png" alt="Opplastingsside" data-caption="Startside der ansatte kan laste opp ett eller flere blodcellebilder for analyse.">
+                </div>
+                <!-- Supporting thumbnails -->
+                <div class="gallery-thumbs">
+                  <img src="sc2.png" alt="Analyseresultater"       data-caption="Etter opplasting kan de starte kategorisering eller nullstille valgte bilder.">
+                  <img src="sc3.png" alt="Kategoriseringsresultat" data-caption="Resultatside som viser hvor syklige cellene er (kategori 1–3) som støtte i videre behandling.">
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- UiPath -->
           <article class="project-card reveal-on-scroll">
+            <div class="proj-meta">
+              <span class="proj-num">02</span>
+              <div class="stat-pills">
+                <span class="stat-pill stat-green">↓ 97% tidsbesparelse</span>
+              </div>
+            </div>
             <h3>UiPath – Automatisering av skoleoppgaver</h3>
             <p>
               Bygde en UiPath-arbeidsflyt som automatiserte repeterende skoleoppgaver,
               inkludert behandling av innleveringer og dataregistrering. Reduserte manuelt
-              arbeid og økte effektiviteten i prosessen.
+              arbeid og økte effektiviteten drastisk.
             </p>
+            <!-- Before / after time comparison -->
+            <div class="time-compare">
+              <div class="time-header">
+                <span class="time-title">Tidsbruk per oppgave</span>
+                <span class="time-saved-badge">−97% tid</span>
+              </div>
+              <div class="time-row">
+                <span class="time-name">Manuelt</span>
+                <div class="time-track"><div class="time-bar time-bar--manual" style="--w:100%"></div></div>
+                <span class="time-val">~8 timer</span>
+              </div>
+              <div class="time-row">
+                <span class="time-name">Automatisert</span>
+                <div class="time-track"><div class="time-bar time-bar--auto" style="--w:3%"></div></div>
+                <span class="time-val time-val--green">~15 min</span>
+              </div>
+            </div>
             <div class="project-gallery">
               <img src="logg-uipath.png"      alt="UiPath logg"    data-caption="Loggvisning som viser at den automatiserte arbeidsflyten har kjørt ferdig.">
               <img src="tid-spart-uipath.png" alt="Tidsbesparelse" data-caption="Oversikt over hvor mye tid som ble spart etter automatisering.">
@@ -168,44 +256,53 @@
               <img src="kaban.png"            alt="Kanban-tavle"   data-caption="Kanban-tavle brukt for å organisere og spore fremdriften.">
             </div>
             <div class="project-tags">
-              <span class="tag">UiPath</span>
-              <span class="tag">RPA</span>
-              <span class="tag">Automatisering</span>
-              <span class="tag">Skripting</span>
+              <span class="tag" style="--tc:#FF6600">UiPath</span>
+              <span class="tag" style="--tc:#2563EB">RPA</span>
+              <span class="tag" style="--tc:#10B981">Automatisering</span>
+              <span class="tag" style="--tc:#6366F1">Skripting</span>
             </div>
           </article>
 
+          <!-- Finn.no Boliganalyse -->
           <article class="project-card reveal-on-scroll">
-            <h3>AI-modell for gjenkjenning av syklige blodceller</h3>
+            <div class="proj-meta">
+              <span class="proj-num">03</span>
+              <div class="stat-pills">
+                <span class="stat-pill stat-blue">Data · Scraping · AI</span>
+              </div>
+            </div>
+            <h3>Finn.no Boligpris-analysator</h3>
             <p>
-              Trente og evaluerte AI-modeller for å gjenkjenne syklige celler på mikroskopbilder,
-              beregnet til å støtte leger i diagnostisering. Inkluderte utvikling av et
-              webgrensesnitt for opplasting og visualisering av resultater.
+              Bygde et fullstendig dataverktøy som henter boligannonser fra Finn.no i sanntid via
+              Playwright og React Router sitt interne API. Appen bruker lineær regresjon til å estimere
+              rettferdig markedspris per bolig — og avslører automatisk kuppene og boligene med
+              størst forhandlingspotensial.
             </p>
-            <div class="project-gallery">
-              <img src="sc1.png" alt="Opplastingsside"         data-caption="Startside der ansatte kan laste opp ett eller flere blodcellebilder for analyse.">
-              <img src="sc2.png" alt="Analyseresultater"       data-caption="Etter opplasting kan de starte kategorisering eller nullstille valgte bilder.">
-              <img src="sc3.png" alt="Kategoriseringsresultat" data-caption="Resultatside som viser hvor syklige cellene er (kategori 1–3) som støtte i videre behandling.">
-            </div>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Maskinlæring</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">Jupyter</span>
+              <span class="tag" style="--tc:#3776AB">Python</span>
+              <span class="tag" style="--tc:#FF4B4B">Streamlit</span>
+              <span class="tag" style="--tc:#10B981">Web Scraping</span>
+              <span class="tag" style="--tc:#8B5CF6">Lineær regresjon</span>
+              <span class="tag" style="--tc:#F59E0B">Plotly</span>
+              <span class="tag" style="--tc:#06AED4">Pandas</span>
             </div>
           </article>
 
+          <!-- Arduino -->
           <article class="project-card reveal-on-scroll">
+            <div class="proj-meta">
+              <span class="proj-num">04</span>
+            </div>
             <h3>Arduino – Fartsmåler med mikrokontroller</h3>
             <p>
               Hobbyprosjekt der jeg bygde en enkel fartsmåler med Arduino og sensorer. Systemet
               målte tid og avstand for å beregne hastighet, og viste resultatet på en tilkoblet skjerm.
             </p>
             <div class="project-tags">
-              <span class="tag">Arduino</span>
-              <span class="tag">C/C++</span>
-              <span class="tag">Elektronikk</span>
-              <span class="tag">Sensorer</span>
+              <span class="tag" style="--tc:#00979D">Arduino</span>
+              <span class="tag" style="--tc:#659AD2">C/C++</span>
+              <span class="tag" style="--tc:#F59E0B">Elektronikk</span>
+              <span class="tag" style="--tc:#60A5FA">Sensorer</span>
             </div>
           </article>
 
@@ -250,7 +347,7 @@
               Jeg er på jakt etter nye utfordringer innen IT, automatisering eller dataanalyse.
               Ta gjerne kontakt via e-post eller LinkedIn — jeg svarer raskt.
             </p>
-            <a href="CV, Richard McMillan.pdf" class="btn btn-primary" download>Last ned CV</a>
+            <a href="CV-improved.html" class="btn btn-primary" target="_blank">Last ned CV</a>
           </div>
 
           <div class="contact-links">
@@ -372,6 +469,38 @@
       if (e.key === 'ArrowRight') showImg(idx + 1);
       if (e.key === 'ArrowLeft')  showImg(idx - 1);
     });
+
+    // ── Animated stat counters ──
+    const counterObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const target = +el.dataset.target;
+        const suffix = el.dataset.suffix || '';
+        const dur = 1600;
+        const start = performance.now();
+        const tick = now => {
+          const t = Math.min((now - start) / dur, 1);
+          const ease = 1 - Math.pow(1 - t, 3);
+          el.textContent = Math.round(ease * target) + suffix;
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        counterObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number[data-target]').forEach(el => counterObs.observe(el));
+
+    // ── Time bar animation ──
+    const barObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('bars-animate');
+          barObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.time-compare').forEach(el => barObs.observe(el));
   </script>
 
 </body>
