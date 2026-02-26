@@ -4,26 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Richard McMillan – Portefølje</title>
+  <title>Richard McMillan – AI-spesialist &amp; Maskinlæring</title>
+  <meta name="description" content="Richard McMillan – AI-spesialist med ekspertise innen maskinlæring, automatisering og dataanalyse. Tilgjengelig for nye muligheter i Norge.">
+  <meta name="author" content="Richard McMillan">
+  <meta property="og:title" content="Richard McMillan – AI-spesialist &amp; Maskinlæring">
+  <meta property="og:description" content="AI-spesialist med ekspertise innen maskinlæring, automatisering og dataanalyse.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="test.jpg">
+  <meta name="theme-color" content="#2563eb">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ========================================================== -->
-  <!-- HEADER / TOPPSEKSJON -->
-  <!-- ========================================================== -->
+  <!-- ============================================================ -->
+  <!-- HEADER — transparent over hero, becomes solid on scroll     -->
+  <!-- ============================================================ -->
 
-  <header class="main-header">
+  <header class="main-header" id="main-header">
     <div class="header-inner">
 
-      <!-- BRAND -->
       <div class="brand">
-        <h1 class="site-title">Richard McMillan</h1>
-        <p class="site-subtitle">IT · Data · Automatisering</p>
+        <div class="site-title">Richard McMillan</div>
+        <div class="site-subtitle">AI-spesialist · Maskinlæring</div>
       </div>
 
-      <!-- NAVIGASJON -->
       <nav class="main-nav">
         <a href="#about">Om meg</a>
         <a href="#projects">Prosjekter</a>
@@ -31,14 +36,10 @@
         <a href="#contact">Kontakt</a>
       </nav>
 
-      <!-- HØYRESIDE: CV-knapp + sosiale ikoner -->
       <div class="header-right">
-        <a href="Richard-McMillan-CV.pdf" class="cv-button" download>
-          Last ned CV
-        </a>
-
+        <a href="CV, Richard McMillan.pdf" class="cv-button" download>Last ned CV</a>
         <div class="social-icons">
-          <a href="https://github.com/Richardmcm" target="_blank" class="icon github" aria-label="GitHub">
+          <a href="https://github.com/Richardmcm" target="_blank" class="icon" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.43 7.86 10.96.58.11.79-.25.79-.56
               0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72
@@ -46,260 +47,275 @@
               0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.51.11-3.14 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.99.01
               1.99.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.64 1.63.24 2.84.12 3.14.75.81 1.2 1.84 1.2 3.1
               0 4.43-2.68 5.41-5.24 5.69.42.36.8 1.09.8 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56A10.99
-              10.99 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
+              10.99 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/>
             </svg>
           </a>
-
-          <a href="https://www.linkedin.com/in/richard-mcmillan-a668a9329/" target="_blank" class="icon linkedin" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/richard-mcmillan-a668a9329/" target="_blank" class="icon" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23.5h-4V8.5zm7.98
-              0h3.83v2.03h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.64 4.76 6.08V23.5h-4v-7.34c0-1.75-.03-4-2.44-4-2.44
-              0-2.81 1.9-2.81 3.87V23.5h-4V8.5z" />
+              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5
+              8.5h4V23.5h-4V8.5zm7.98 0h3.83v2.03h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.64 4.76 6.08V23.5h-4
+              v-7.34c0-1.75-.03-4-2.44-4-2.44 0-2.81 1.9-2.81 3.87V23.5h-4V8.5z"/>
             </svg>
           </a>
         </div>
       </div>
 
     </div>
-
-    <p class="site-progress">— Nettside in progress —</p>
   </header>
 
-  <!-- ========================================================== -->
-  <!-- HOVEDINNHOLD -->
-  <!-- ========================================================== -->
+  <!-- ============================================================ -->
+  <!-- HERO — full viewport, cinematic                             -->
+  <!-- ============================================================ -->
+
+  <section class="hero">
+
+    <!-- Background layers -->
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <!-- Bottom fade into page background -->
+    <div class="hero-fade"></div>
+
+    <!-- Content -->
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-eyebrow">AI-spesialist · Maskinlæring · Automatisering</div>
+        <h1 class="hero-name">Richard<br>McMillan</h1>
+        <p class="hero-sub">
+          Jeg bygger AI-løsninger og smarte systemer innen<br>
+          maskinlæring, automatisering og dataanalyse.
+        </p>
+        <div class="hero-cta">
+          <a href="CV, Richard McMillan.pdf" class="btn btn-primary" download>Last ned CV</a>
+          <a href="#contact" class="btn btn-ghost">Ta kontakt →</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <img src="meg.jpeg" alt="Richard McMillan" class="hero-photo">
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- MAIN CONTENT                                                 -->
+  <!-- ============================================================ -->
 
   <main>
 
-    <!-- ============================ -->
     <!-- OM MEG -->
-    <!-- ============================ -->
+    <section id="about">
+      <div class="container">
+        <div class="section-tag">Introduksjon</div>
+        <h2 class="section-heading">Om meg</h2>
 
-    <section id="about" class="section-first">
-      <div class="section-label">Introduksjon</div>
-      <h2>Om meg</h2>
+        <div class="about-layout">
+          <div class="about-photo-wrap">
+            <img src="test.jpg" alt="Bilde av Richard McMillan" class="about-photo">
+          </div>
 
-      <div class="about-container">
-
-        <picture>
-          <img src="test.jpg" alt="Bilde av meg">
-        </picture>
-
-        <div class="about-text">
-          <p>
-            Hei! jeg heter Richard McMillan, er 28 år gammel, og kommer fra Norge.
-            Jeg tok først en bachelorgrad i historie fra Høgskulen i Volda,
-            før interessen for teknologi tok over og jeg bestemte meg for å bytte karrierevei.
-            Jeg tok deretter en bachelorgrad i IT og digitalisering/programmering ved Høgskolen i Molde.
-          </p>
-
-          <p>
-            Jeg brenner for teknologi, spesielt innen automatisering og maskinlæring, og liker å bygge
-            løsninger som gjør hverdagen enklere. På fritiden jobber jeg med egne små prosjekter innen AI
-            og prøver å lære noe nytt hver eneste uke.
-          </p>
+          <div class="about-body">
+            <p>
+              Hei! Jeg heter Richard McMillan, er 29 år gammel, og kommer fra Norge.
+              Jeg tok først en bachelorgrad i historie fra Høgskulen i Volda,
+              før interessen for teknologi tok over og jeg bestemte meg for å bytte karrierevei.
+              Jeg tok deretter en bachelorgrad i IT og digitalisering/programmering ved Høgskolen i Molde.
+            </p>
+            <p>
+              Jeg brenner for teknologi, spesielt innen automatisering og maskinlæring, og liker å bygge
+              løsninger som gjør hverdagen enklere. På fritiden jobber jeg med egne prosjekter innen AI
+              og prøver å lære noe nytt hver eneste uke.
+            </p>
+            <div class="about-meta">
+              <span class="meta-chip">📍 Norge</span>
+              <span class="meta-chip">🎓 BSc IT &amp; Digitalisering</span>
+              <span class="meta-chip">🤖 Automatisering &amp; AI</span>
+            </div>
+          </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ============================ -->
     <!-- PROSJEKTER -->
-    <!-- ============================ -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-tag">Utvalgte arbeider</div>
+        <h2 class="section-heading">Prosjekter</h2>
 
-    <section class="projects" id="projects">
-      <div class="section-label">Utvalgte arbeider</div>
-      <h2>Prosjekter</h2>
+        <div class="projects-grid">
 
-      <div class="project-grid">
+          <article class="project-card reveal-on-scroll">
+            <h3>UiPath – Automatisering av skoleoppgaver</h3>
+            <p>
+              Bygde en UiPath-arbeidsflyt som automatiserte repeterende skoleoppgaver,
+              inkludert behandling av innleveringer og dataregistrering. Reduserte manuelt
+              arbeid og økte effektiviteten i prosessen.
+            </p>
+            <div class="project-gallery">
+              <img src="logg-uipath.png"      alt="UiPath logg"    data-caption="Loggvisning som viser at den automatiserte arbeidsflyten har kjørt ferdig.">
+              <img src="tid-spart-uipath.png" alt="Tidsbesparelse" data-caption="Oversikt over hvor mye tid som ble spart etter automatisering.">
+              <img src="flowc.png"            alt="Arbeidsflyt"    data-caption="Del av arbeidsflyten som viser de ulike stegene i prosessen.">
+              <img src="kaban.png"            alt="Kanban-tavle"   data-caption="Kanban-tavle brukt for å organisere og spore fremdriften.">
+            </div>
+            <div class="project-tags">
+              <span class="tag">UiPath</span>
+              <span class="tag">RPA</span>
+              <span class="tag">Automatisering</span>
+              <span class="tag">Skripting</span>
+            </div>
+          </article>
 
-        <!-- UIPATH -->
-        <article class="project-card reveal-on-scroll">
-          <h3>UiPath – Automatisering av skoleoppgaver</h3>
-          <p>
-            Prosjekt der jeg bygde en UiPath-arbeidsflyt som automatiserte repeterende skoleoppgaver,
-            som behandling av innleveringer og registrering av data. Målet var å redusere manuelt arbeid
-            og gjøre prosessen mer effektiv og mindre feilutsatt.
-          </p>
+          <article class="project-card reveal-on-scroll">
+            <h3>AI-modell for gjenkjenning av syklige blodceller</h3>
+            <p>
+              Trente og evaluerte AI-modeller for å gjenkjenne syklige celler på mikroskopbilder,
+              beregnet til å støtte leger i diagnostisering. Inkluderte utvikling av et
+              webgrensesnitt for opplasting og visualisering av resultater.
+            </p>
+            <div class="project-gallery">
+              <img src="sc1.png" alt="Opplastingsside"         data-caption="Startside der ansatte kan laste opp ett eller flere blodcellebilder for analyse.">
+              <img src="sc2.png" alt="Analyseresultater"       data-caption="Etter opplasting kan de starte kategorisering eller nullstille valgte bilder.">
+              <img src="sc3.png" alt="Kategoriseringsresultat" data-caption="Resultatside som viser hvor syklige cellene er (kategori 1–3) som støtte i videre behandling.">
+            </div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Maskinlæring</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Jupyter</span>
+            </div>
+          </article>
 
-          <div class="project-gallery">
-            <img
-              src="logg-uipath.png"
-              alt="UiPath loggvisning"
-              data-caption="Loggvisning som viser at den automatiserte arbeidsflyten har kjørt ferdig.">
-            <img
-              src="tid-spart-uipath.png"
-              alt="UiPath tidsbesparelse"
-              data-caption="Oversikt over hvor mye tid som ble spart etter automatisering.">
-              <img
-              src ="flowc.png"
-              alt="UiPath arbeidsflyt"
-              data-caption="Del av arbeidsflyten som viser de ulike stegene i prosessen.">
-            <img
-              src = "kaban.png"
-              alt="Kanban-tavle for prosjektstyring"
-              data-caption="Kanban-tavle som ble brukt for å organisere og spore fremdriften i prosjektet.">
+          <article class="project-card reveal-on-scroll">
+            <h3>Arduino – Fartsmåler med mikrokontroller</h3>
+            <p>
+              Hobbyprosjekt der jeg bygde en enkel fartsmåler med Arduino og sensorer. Systemet
+              målte tid og avstand for å beregne hastighet, og viste resultatet på en tilkoblet skjerm.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Arduino</span>
+              <span class="tag">C/C++</span>
+              <span class="tag">Elektronikk</span>
+              <span class="tag">Sensorer</span>
+            </div>
+          </article>
 
-          </div>
-
-          <p class="project-tech">
-            <strong>Teknologier:</strong> UiPath, arbeidsflyt-automatisering, grunnleggende skripting
-          </p>
-        </article>
-
-        <!-- SICKLE CELL AI -->
-        <article class="project-card reveal-on-scroll">
-          <h3>AI til å oppdage syklige blodceller</h3>
-          <p>
-            Prosjekt der jeg trente og evaluerte AI-modeller for å gjenkjenne syklige celler på mikroskopbilder
-            for å støtte leger i diagnostisering. Bildene under viser utviklingen av grensesnittet for løsningen.
-          </p>
-
-          <div class="project-gallery">
-            <img src="sc1.png"
-                 alt="Første versjon av AI-grensesnittet"
-                 data-caption="Startside der ansatte kan laste opp ett eller flere blodcellebilder for analyse.">
-            <img src="sc2.png"
-                 alt="Videreutviklet UI for analyseresultater"
-                 data-caption="Etter opplasting kan de starte kategorisering eller nullstille valgte bilder.">
-            <img src="sc3.png"
-                 alt="Endelig versjon av kategoriseringsresultat"
-                 data-caption="Resultatside som viser hvor syklige cellene er (kategori 1–3) som støtte i videre behandling.">
-          </div>
-
-          <p class="project-tech">
-            <strong>Teknologier:</strong> Python, maskinlæring, bildeanalyse, Jupyter Notebooks, webgrensesnitt
-          </p>
-        </article>
-
-        <!-- ARDUINO -->
-        <article class="project-card reveal-on-scroll">
-          <h3>Arduino mikrokontroller – Fartsmåler</h3>
-          <p>
-            Et hobbyprosjekt der jeg bygde en enkel fartsmåler med Arduino og sensorer. Systemet målte tid og
-            avstand for å beregne hastighet, og viste resultatet på en skjerm.
-          </p>
-          <p class="project-tech">
-            <strong>Teknologier:</strong> Arduino, C/C++, sensorer, enkel elektronikk
-          </p>
-        </article>
-
+        </div>
       </div>
     </section>
 
-    <!-- ============================ -->
-    <!-- SKILLS / KOMPETANSE -->
-    <!-- ============================ -->
-
+    <!-- KOMPETANSE -->
     <section id="skills">
-      <div class="section-label">Verktøy og styrker</div>
-      <h2>Kompetanse</h2>
-      <div class="skills-grid">
+      <div class="container">
+        <div class="section-tag">Verktøy og styrker</div>
+        <h2 class="section-heading">Kompetanse</h2>
 
-        <div class="skill-item reveal-on-scroll">
-          <span class="skill-icon">🐍</span>
-          <span class="skill-label">Python</span>
+        <div class="skills-grid">
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">🐍</span><span>Python</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">📊</span><span>Dataanalyse</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">🤖</span><span>Maskinlæring / AI</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">👁️</span><span>Computer Vision</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">⚙️</span><span>UiPath / RPA</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">🏢</span><span>SAP / ERP</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">🗄️</span><span>SQL</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">📜</span><span>JavaScript</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">🌐</span><span>HTML &amp; CSS</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">🔧</span><span>Git &amp; GitHub</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">🧭</span><span>Kanban</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">📈</span><span>Power BI</span></div>
+          <div class="skill-item reveal-on-scroll"><span class="skill-icon">🏃</span><span>Scrum</span></div>
         </div>
-
-        <div class="skill-item reveal-on-scroll">
-          <span class="skill-icon">📊</span>
-          <span class="skill-label">Dataanalyse (pandas, numpy,seaborn)</span>
-        </div>
-
-        <div class="skill-item reveal-on-scroll">
-          <span class="skill-icon">🤖</span>
-          <span class="skill-label">Maskinlæring / AI-modeller</span>
-        </div>
-
-        <div class="skill-item reveal-on-scroll">
-          <span class="skill-icon">👁️</span>
-          <span class="skill-label">Computer Vision</span>
-        </div>
-
-        <div class="skill-item reveal-on-scroll">
-          <span class="skill-icon">⚙️</span>
-          <span class="skill-label">Automatisering (UiPath)</span>
-        </div>
-
-        <div class="skill-item reveal-on-scroll">
-          <span class="skill-icon">🏢</span>
-          <span class="skill-label">ERP-systemer (SAP)</span>
-        </div>
-
-        <div class="skill-item reveal-on-scroll">
-          <span class="skill-icon">🗄️</span>
-          <span class="skill-label">SQL</span>
-        </div>
-        
-        <div class="skill-item reveal-on-scroll">
-            <span class="skill-icon">📜</span>
-            <span class="skill-label">JavaScript</span>
-        </div>
-
-        <div class="skill-item reveal-on-scroll">
-          <span class="skill-icon">🌐</span>
-          <span class="skill-label">HTML & CSS</span>
-        </div>
-
-        <div class="skill-item reveal-on-scroll">
-          <span class="skill-icon">🔧</span>
-          <span class="skill-label">Git & GitHub</span>
-        </div>
-        <div class="skill-item reveal-on-scroll">
-            <span class="skill-icon">🧭</span>
-            <span class="skill-label">Kanban</span>
-        </div>
-
-        <div class="skill-item reveal-on-scroll">
-          <span class="skill-icon">📈</span>
-          <span class="skill-label">Power BI</span>
-        </div>
-
-        <div class="skill-item reveal-on-scroll">
-            <span class="skill-icon">🏃</span>
-            <span class="skill-label">Scrum</span>
-          </div>
       </div>
     </section>
 
-    <!-- ============================ -->
     <!-- KONTAKT -->
-    <!-- ============================ -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-tag">Kontakt</div>
+        <h2 class="section-heading">La oss snakke</h2>
 
-    <section class="contact" id="contact">
-      
-      <h2>Kontakt</h2>
-      <p>
-        Ta gjerne kontakt på e-post:
-        <a href="mailto:richard.mcmillan97@gmail.com">richard.mcmillan97@gmail.com</a>
-      </p>
+        <div class="contact-inner">
+          <div class="contact-text">
+            <h3>Klar for neste steg</h3>
+            <p>
+              Jeg er på jakt etter nye utfordringer innen IT, automatisering eller dataanalyse.
+              Ta gjerne kontakt via e-post eller LinkedIn — jeg svarer raskt.
+            </p>
+            <a href="CV, Richard McMillan.pdf" class="btn btn-primary" download>Last ned CV</a>
+          </div>
+
+          <div class="contact-links">
+            <a href="mailto:richard.mcmillan97@gmail.com" class="contact-link">
+              <div class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-link-label">E-post</span>
+                <span class="contact-link-value">richard.mcmillan97@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/richard-mcmillan-a668a9329/" target="_blank" class="contact-link">
+              <div class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5
+                  8.5h4V23.5h-4V8.5zm7.98 0h3.83v2.03h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.64 4.76 6.08V23.5h-4
+                  v-7.34c0-1.75-.03-4-2.44-4-2.44 0-2.81 1.9-2.81 3.87V23.5h-4V8.5z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">Richard McMillan</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/Richardmcm" target="_blank" class="contact-link">
+              <div class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.43 7.86 10.96.58.11.79-.25.79-.56
+                  0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72
+                  1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.72 1.27 3.38.97.11-.76.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7
+                  0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.51.11-3.14 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.99.01
+                  1.99.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.64 1.63.24 2.84.12 3.14.75.81 1.2 1.84 1.2 3.1
+                  0 4.43-2.68 5.41-5.24 5.69.42.36.8 1.09.8 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56A10.99
+                  10.99 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">github.com/Richardmcm</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <!-- ========================================================== -->
-  <!-- FOOTER -->
-  <!-- ========================================================== -->
-
   <footer>
-    <p>&copy; 2025 Richard McMillan</p>
+    <p>&copy; 2026 Richard McMillan</p>
   </footer>
 
-  <!-- LIGHTBOX OVERLAY -->
+  <!-- LIGHTBOX -->
   <div id="lightbox" class="lightbox">
     <div class="lightbox-content">
-      <button class="lightbox-close" aria-label="Lukk bilde">&times;</button>
-
-      <!-- Venstre pil -->
-      <button class="lightbox-arrow lightbox-prev" aria-label="Forrige bilde">&#10094;</button>
-
-      <!-- Selve bildet -->
+      <button class="lightbox-close" aria-label="Lukk">&times;</button>
+      <button class="lightbox-arrow lightbox-prev" aria-label="Forrige">&#10094;</button>
       <img id="lightbox-image" src="" alt="">
-
-      <!-- Høyre pil -->
-      <button class="lightbox-arrow lightbox-next" aria-label="Neste bilde">&#10095;</button>
-
-      <!-- Caption + counter -->
+      <button class="lightbox-arrow lightbox-next" aria-label="Neste">&#10095;</button>
       <div class="lightbox-meta">
         <p id="lightbox-caption"></p>
         <p id="lightbox-counter"></p>
@@ -307,106 +323,54 @@
     </div>
   </div>
 
-  <!-- Scroll reveal + Lightbox script -->
   <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("reveal-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
+    // ── Header: transparent → solid on scroll ──
+    const header = document.getElementById('main-header');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // ── Scroll reveal ──
+    const revealObs = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('reveal-visible'); revealObs.unobserve(e.target); }
+      }),
+      { threshold: 0.1 }
     );
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => revealObs.observe(el));
 
-    document.querySelectorAll(".reveal-on-scroll").forEach((el) => {
-      observer.observe(el);
+    // ── Lightbox ──
+    const lb    = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-image');
+    const lbCap = document.getElementById('lightbox-caption');
+    const lbCnt = document.getElementById('lightbox-counter');
+    let gallery = [], idx = 0;
+
+    const showImg = i => {
+      idx = (i + gallery.length) % gallery.length;
+      lbImg.src = gallery[idx].src;
+      lbImg.alt = gallery[idx].alt || '';
+      lbCap.textContent = gallery[idx].dataset.caption || '';
+      lbCnt.textContent = `${idx + 1} / ${gallery.length}`;
+    };
+    const closeLb = () => { lb.classList.remove('open'); lbImg.src = ''; };
+
+    document.querySelectorAll('.project-gallery').forEach(g => {
+      const imgs = Array.from(g.querySelectorAll('img'));
+      imgs.forEach((img, i) => img.addEventListener('click', () => {
+        gallery = imgs; showImg(i); lb.classList.add('open');
+      }));
     });
 
-    // Lightbox + galleri
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightbox-image");
-    const lightboxClose = document.querySelector(".lightbox-close");
-    const prevButton = document.querySelector(".lightbox-prev");
-    const nextButton = document.querySelector(".lightbox-next");
-    const captionEl = document.getElementById("lightbox-caption");
-    const counterEl = document.getElementById("lightbox-counter");
-
-    let currentGallery = [];
-    let currentIndex = 0;
-
-    function showImage(index) {
-      if (!currentGallery.length) return;
-      const total = currentGallery.length;
-      currentIndex = (index + total) % total;
-      const img = currentGallery[currentIndex];
-      lightboxImage.src = img.src;
-      lightboxImage.alt = img.alt || "";
-      captionEl.textContent = img.dataset.caption || "";
-      counterEl.textContent = `${currentIndex + 1} / ${total}`;
-    }
-
-    function openLightbox(index, galleryImages) {
-      currentGallery = galleryImages;
-      showImage(index);
-      lightbox.classList.add("open");
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove("open");
-      lightboxImage.src = "";
-      captionEl.textContent = "";
-      counterEl.textContent = "";
-    }
-
-    // Koble thumbnails til lightbox, per galleri
-    document.querySelectorAll(".project-gallery").forEach((gallery) => {
-      const images = Array.from(gallery.querySelectorAll("img"));
-      images.forEach((img, index) => {
-        img.addEventListener("click", () => {
-          openLightbox(index, images);
-        });
-      });
-    });
-
-    // Pil-knapper
-    prevButton.addEventListener("click", (event) => {
-      event.stopPropagation();
-      showImage(currentIndex - 1);
-    });
-
-    nextButton.addEventListener("click", (event) => {
-      event.stopPropagation();
-      showImage(currentIndex + 1);
-    });
-
-    // Lukkeknapp
-    lightboxClose.addEventListener("click", (event) => {
-      event.stopPropagation();
-      closeLightbox();
-    });
-
-    // Klikk på mørk bakgrunn -> lukk
-    lightbox.addEventListener("click", (event) => {
-      if (event.target === lightbox) {
-        closeLightbox();
-      }
-    });
-
-    // Tastaturkontroller
-    document.addEventListener("keydown", (event) => {
-      if (!lightbox.classList.contains("open")) return;
-
-      if (event.key === "Escape") {
-        closeLightbox();
-      } else if (event.key === "ArrowRight") {
-        showImage(currentIndex + 1);
-      } else if (event.key === "ArrowLeft") {
-        showImage(currentIndex - 1);
-      }
+    document.querySelector('.lightbox-prev').addEventListener('click',  e => { e.stopPropagation(); showImg(idx - 1); });
+    document.querySelector('.lightbox-next').addEventListener('click',  e => { e.stopPropagation(); showImg(idx + 1); });
+    document.querySelector('.lightbox-close').addEventListener('click', e => { e.stopPropagation(); closeLb(); });
+    lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape')     closeLb();
+      if (e.key === 'ArrowRight') showImg(idx + 1);
+      if (e.key === 'ArrowLeft')  showImg(idx - 1);
     });
   </script>
 

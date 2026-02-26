@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV – Richard McMillan</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sidebar-bg:   #0f172a;
+      --sidebar-text: #cbd5e1;
+      --sidebar-head: #ffffff;
+      --sidebar-accent: #60a5fa;
+      --accent:       #1d4ed8;
+      --accent-lt:    #eff6ff;
+      --text:         #1e293b;
+      --muted:        #64748b;
+      --border:       #e2e8f0;
+      --tag-bg:       #f1f5f9;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+      font-size: 11.5px;
+      color: var(--text);
+      line-height: 1.6;
+      background: #fff;
+      display: flex;
+      min-height: 297mm;
+      width: 210mm;
+      margin: 0 auto;
+    }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar {
+      width: 68mm;
+      min-height: 100%;
+      background: var(--sidebar-bg);
+      padding: 32px 24px 32px 24px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .sidebar-name {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sidebar-head);
+      line-height: 1.15;
+      letter-spacing: -0.3px;
+    }
+
+    .sidebar-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--sidebar-accent);
+      margin-top: 5px;
+    }
+
+    .sidebar-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .s-section-title {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--sidebar-accent);
+      margin-bottom: 10px;
+    }
+
+    /* Contact */
+    .contact-list { display: flex; flex-direction: column; gap: 7px; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      color: var(--sidebar-text);
+      font-size: 10.5px;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .contact-item svg {
+      flex-shrink: 0;
+      margin-top: 1px;
+      opacity: 0.7;
+    }
+    a.contact-item:hover { color: #fff; }
+
+    /* Skills */
+    .skill-group { margin-bottom: 14px; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group-name {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 5px;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .skill-tag {
+      font-size: 9.5px;
+      font-weight: 500;
+      background: rgba(255,255,255,0.08);
+      color: var(--sidebar-text);
+      padding: 2px 7px;
+      border-radius: 3px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    /* Lang */
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10.5px;
+      color: var(--sidebar-text);
+      margin-bottom: 6px;
+    }
+    .lang-level {
+      font-size: 9px;
+      color: var(--sidebar-accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .lang-dots { display: flex; gap: 3px; margin-top: 3px; }
+    .lang-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+    }
+    .lang-dot.filled { background: var(--sidebar-accent); }
+
+    /* ─── MAIN ─── */
+    .main {
+      flex: 1;
+      padding: 32px 28px 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    /* Section */
+    .section {}
+    .section-title {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid var(--accent);
+      margin-bottom: 14px;
+    }
+
+    /* Profile */
+    .profile-text {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* Entry */
+    .entry { margin-bottom: 14px; position: relative; padding-left: 14px; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+    .entry-title { font-size: 12px; font-weight: 700; color: var(--text); }
+    .entry-date {
+      font-size: 9.5px;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+    .entry-org { font-size: 10.5px; color: var(--accent); font-weight: 600; margin: 1px 0 4px; }
+    .entry-desc { font-size: 10.5px; color: var(--muted); line-height: 1.65; }
+
+    /* Achievement pill */
+    .achievement {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--accent-lt);
+      border: 1px solid #bfdbfe;
+      color: var(--accent);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin: 6px 0 5px;
+    }
+    .achievement::before { content: '★'; font-size: 9px; }
+
+    /* Tags */
+    .entry-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 6px; }
+    .tag {
+      font-size: 9px;
+      font-weight: 600;
+      background: var(--tag-bg);
+      color: var(--muted);
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.2px;
+      border: 1px solid var(--border);
+    }
+
+    /* Edu entry (no dot) */
+    .edu-entry { margin-bottom: 12px; }
+    .edu-entry:last-child { margin-bottom: 0; }
+    .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+    .edu-title { font-size: 11.5px; font-weight: 700; color: var(--text); }
+    .edu-date { font-size: 9.5px; color: var(--muted); white-space: nowrap; }
+    .edu-org { font-size: 10.5px; color: var(--accent); font-weight: 600; margin: 1px 0 2px; }
+    .edu-desc { font-size: 10.5px; color: var(--muted); }
+
+    /* Timeline line */
+    .entries { position: relative; }
+    .entries::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 6px;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+
+    @media print {
+      body { margin: 0; }
+      a { color: inherit !important; text-decoration: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ SIDEBAR ═══════════════ -->
+<aside class="sidebar">
+
+  <!-- Name -->
+  <div>
+    <div class="sidebar-name">Richard<br>McMillan</div>
+    <div class="sidebar-title">AI-spesialist · Maskinlæring</div>
+  </div>
+
+  <div class="sidebar-divider"></div>
+
+  <!-- Kontakt -->
+  <div>
+    <div class="s-section-title">Kontakt</div>
+    <div class="contact-list">
+      <a class="contact-item" href="mailto:richard.mcmillan97@gmail.com">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        richard.mcmillan97@gmail.com
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/richard-mcmillan-a668a9329/" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        linkedin.com/in/richard-mcmillan
+      </a>
+      <a class="contact-item" href="https://github.com/richardmcm" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        github.com/richardmcm
+      </a>
+      <span class="contact-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Norge
+      </span>
+    </div>
+  </div>
+
+  <div class="sidebar-divider"></div>
+
+  <!-- Teknisk kompetanse -->
+  <div>
+    <div class="s-section-title">Teknisk kompetanse</div>
+
+    <div class="skill-group">
+      <div class="skill-group-name">Programmering</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">PHP</span>
+        <span class="skill-tag">C#</span>
+        <span class="skill-tag">HTML/CSS</span>
+        <span class="skill-tag">Visual Basic</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-name">AI &amp; Automatisering</div>
+      <div class="skill-tags">
+        <span class="skill-tag">UiPath / RPA</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">OpenCV</span>
+        <span class="skill-tag">Flask</span>
+        <span class="skill-tag">Node-RED</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-name">Verktøy</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Arduino</span>
+        <span class="skill-tag">SAP</span>
+        <span class="skill-tag">Canvas API</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-name">Metodikk</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Agile / Scrum</span>
+        <span class="skill-tag">Systemintegrasjon</span>
+        <span class="skill-tag">Dataanalyse</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar-divider"></div>
+
+  <!-- Interesser -->
+  <div>
+    <div class="s-section-title">Interesser</div>
+    <div class="skill-group">
+      <div class="skill-tags">
+        <span class="skill-tag">Generativ AI</span>
+        <span class="skill-tag">LLM-er</span>
+        <span class="skill-tag">MLOps</span>
+        <span class="skill-tag">Computer Vision</span>
+        <span class="skill-tag">AI-agenter</span>
+        <span class="skill-tag">Open source</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar-divider"></div>
+
+  <!-- Språk -->
+  <div>
+    <div class="s-section-title">Språk</div>
+    <div>
+      <div class="lang-item">
+        <span>Norsk</span>
+        <span class="lang-level">Morsmål</span>
+      </div>
+      <div class="lang-dots">
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+      </div>
+    </div>
+    <div style="margin-top: 10px;">
+      <div class="lang-item">
+        <span>Engelsk</span>
+        <span class="lang-level">Flytende</span>
+      </div>
+      <div class="lang-dots">
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot"></div>
+      </div>
+    </div>
+  </div>
+
+</aside>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
+<main class="main">
+
+  <!-- Profil -->
+  <section class="section">
+    <div class="section-title">Profil</div>
+    <p class="profile-text">
+      IT-kandidat med bachelor i IT og digitalisering fra Høgskolen i Molde, med fordypning i
+      automatisering, dataanalyse og maskinlæring. Dokumentert evne til å bygge løsninger som skaper
+      konkret nytteverdi — fra RPA-systemer som sparer 50+ timer per semester, til deep learning-modeller
+      for medisinsk diagnostisering. Internasjonal forskningserfaring fra Nederland.
+    </p>
+    <p class="profile-text" style="margin-top: 8px;">
+      Genuint interessert i AI og følger feltet tett — fra store språkmodeller og multimodale systemer
+      til anvendt maskinlæring i industrien. Jeg eksperimenterer jevnlig med nye verktøy og modeller
+      på fritiden, og liker å omsette det jeg lærer til konkrete prosjekter. Søker utfordringer der
+      teknisk dybde og nysgjerrighet på det som skjer i front møtes.
+    </p>
+  </section>
+
+  <!-- Nøkkelprosjekter -->
+  <section class="section">
+    <div class="section-title">Nøkkelprosjekter</div>
+    <div class="entries">
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Automatisert sensurretting – Bacheloroppgave</div>
+          <div class="entry-date">Jan – Jun 2024</div>
+        </div>
+        <div class="entry-org">Høgskolen i Molde &nbsp;·&nbsp; Karakter: B</div>
+        <div class="entry-desc">
+          RPA-løsning (UiPath) som integrerer Canvas og SAP for automatisk retting av innleveringer.
+          Håndterer 770+ besvarelser på 1,5 time — en prosess som tidligere tok over 50 timer per semester.
+        </div>
+        <div class="achievement">97 % tidsbesparelse – fra 50+ timer til 1,5 time</div>
+        <div class="entry-tags">
+          <span class="tag">UiPath</span><span class="tag">RPA</span><span class="tag">Visual Basic</span>
+          <span class="tag">Canvas API</span><span class="tag">SAP</span><span class="tag">Prosessautomatisering</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Sigdcelledeteksjon med Computer Vision</div>
+          <div class="entry-date">Jan – Jul 2023</div>
+        </div>
+        <div class="entry-org">RR Mechatronics &nbsp;·&nbsp; Inholland University, Nederland</div>
+        <div class="entry-desc">
+          Forskerprosjekt med medisinsk utstyrsprodusent. Trente og evaluerte konvolusjonelle nevrale
+          nettverk (inkl. VGG16) for klassifisering av røde blodceller fra mikroskopibilder.
+        </div>
+        <div class="achievement">Beste modell (VGG16): 85 % nøyaktighet</div>
+        <div class="entry-tags">
+          <span class="tag">Python</span><span class="tag">CNN / VGG16</span>
+          <span class="tag">Computer Vision</span><span class="tag">Deep Learning</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Læringsplattform for barn og unge</div>
+          <div class="entry-date">Jun – Des 2022</div>
+        </div>
+        <div class="entry-org">Høgskolen i Molde</div>
+        <div class="entry-desc">
+          Designet og utviklet interaktiv nettbasert læringsplattform fra bunnen av med Flask og Python.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML/CSS</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Arduino fartsmåling</div>
+          <div class="entry-date">Aug – Des 2023</div>
+        </div>
+        <div class="entry-org">Høgskolen i Molde</div>
+        <div class="entry-desc">
+          Bygget og programmerte sanntids fartsmålingssystem med Arduino, koblet til dashboard via Node-RED.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">C#</span><span class="tag">Arduino</span><span class="tag">Node-RED</span><span class="tag">IoT</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Utdanning -->
+  <section class="section">
+    <div class="section-title">Utdanning</div>
+
+    <div class="edu-entry">
+      <div class="edu-header">
+        <div class="edu-title">Bachelor i IT og digitalisering</div>
+        <div class="edu-date">2021 – 2024</div>
+      </div>
+      <div class="edu-org">Høgskolen i Molde</div>
+      <div class="edu-desc">Machine Learning · Information Security · Agile Methods · Diskret matematikk</div>
+    </div>
+
+    <div class="edu-entry">
+      <div class="edu-header">
+        <div class="edu-title">Utveksling – Big Data &amp; AI</div>
+        <div class="edu-date">2023</div>
+      </div>
+      <div class="edu-org">Inholland University of Applied Sciences, Nederland</div>
+      <div class="edu-desc">Computer Vision I &amp; II · Data Mining &amp; Statistics · Big Data &amp; AI Fundamentals</div>
+    </div>
+
+    <div class="edu-entry">
+      <div class="edu-header">
+        <div class="edu-title">Bachelor i historie</div>
+        <div class="edu-date">2019 – 2021</div>
+      </div>
+      <div class="edu-org">Høgskolen i Volda</div>
+    </div>
+
+  </section>
+
+  <!-- Arbeidserfaring -->
+  <section class="section">
+    <div class="section-title">Arbeidserfaring</div>
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Tekniker – Elektroniske adgangskontrollsystemer</div>
+          <div class="entry-date">Sep 2024 – nå</div>
+        </div>
+        <div class="entry-org">Maritim sektor &nbsp;·&nbsp; Internasjonal</div>
+        <div class="entry-desc">
+          Installasjon, konfigurering og feilsøking av elektroniske adgangskontroll- og låssystemer
+          om bord på cruiseskip. Arbeidet i krevende, internasjonale driftsmiljøer med høye krav til
+          presisjon, dokumentasjon og overholdelse av maritime sikkerhetsforskrifter.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">Adgangskontroll</span><span class="tag">Elektroniske systemer</span>
+          <span class="tag">Teknisk installasjon</span><span class="tag">Maritim sikkerhet</span>
+          <span class="tag">Feilsøking</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Kundeassistent</div>
+          <div class="entry-date">2019 – 2023</div>
+        </div>
+        <div class="entry-org">AVIS Bilutleie</div>
+        <div class="entry-desc">
+          Kundeservice, kjøretøylogistikk og intern rapportering. Brukte Power BI for administrasjon
+          og dataanalyse av utleiedata.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">Kundekontakt</span><span class="tag">Power BI</span><span class="tag">Dataanalyse</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
