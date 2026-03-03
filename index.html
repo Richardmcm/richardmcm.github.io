@@ -30,8 +30,8 @@
       </div>
 
       <nav class="main-nav">
-        <a href="#about">Om meg</a>
         <a href="#projects">Prosjekter</a>
+        <a href="#about">Om meg</a>
         <a href="#skills">Kompetanse</a>
         <a href="#contact">Kontakt</a>
       </nav>
@@ -113,39 +113,6 @@
 
   <main>
 
-    <!-- OM MEG -->
-    <section id="about">
-      <div class="container">
-        <div class="section-tag">Introduksjon</div>
-        <h2 class="section-heading">Om meg</h2>
-
-        <div class="about-layout">
-          <div class="about-photo-wrap">
-            <img src="test.jpg" alt="Bilde av Richard McMillan" class="about-photo">
-          </div>
-
-          <div class="about-body">
-            <p>
-              Hei! Jeg heter Richard McMillan, er 29 år gammel, og kommer fra Norge.
-              Jeg tok først en bachelorgrad i historie fra Høgskulen i Volda,
-              før interessen for teknologi tok over og jeg bestemte meg for å bytte karrierevei.
-              Jeg tok deretter en bachelorgrad i IT og digitalisering/programmering ved Høgskolen i Molde.
-            </p>
-            <p>
-              Jeg brenner for teknologi, spesielt innen automatisering og maskinlæring, og liker å bygge
-              løsninger som gjør hverdagen enklere. På fritiden jobber jeg med egne prosjekter innen AI
-              og prøver å lære noe nytt hver eneste uke.
-            </p>
-            <div class="about-meta">
-              <span class="meta-chip">📍 Norge</span>
-              <span class="meta-chip">🎓 BSc IT &amp; Digitalisering</span>
-              <span class="meta-chip">🤖 Automatisering &amp; AI</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- PROSJEKTER -->
     <section id="projects">
       <div class="container">
@@ -168,7 +135,7 @@
           </div>
           <div class="stat-divider"></div>
           <div class="stat-block">
-            <div class="stat-number" data-target="4" data-suffix="">0</div>
+            <div class="stat-number" data-target="5" data-suffix="">0</div>
             <div class="stat-label">Prosjekter</div>
             <div class="stat-sublabel">Fullført &amp; dokumentert</div>
           </div>
@@ -269,6 +236,7 @@
               <span class="proj-num">03</span>
               <div class="stat-pills">
                 <span class="stat-pill stat-blue">Data · Scraping · AI</span>
+                <span class="stat-pill" style="background:rgba(251,191,36,0.12);color:#fbbf24;border:1px solid rgba(251,191,36,0.3)">🚧 Work in progress</span>
               </div>
             </div>
             <h3>Finn.no Boligpris-analysator</h3>
@@ -286,12 +254,69 @@
               <span class="tag" style="--tc:#F59E0B">Plotly</span>
               <span class="tag" style="--tc:#06AED4">Pandas</span>
             </div>
+            <div style="margin-top:1.25rem">
+              <a href="https://richardmcmillan.no/finn-bolig/" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.875rem;padding:0.5rem 1.25rem">
+                Prøv appen →
+              </a>
+            </div>
+          </article>
+
+          <!-- Strikke-Oppskriftsgenerator -->
+          <article class="project-card reveal-on-scroll">
+            <div class="proj-meta">
+              <span class="proj-num">05</span>
+              <div class="stat-pills">
+                <span class="stat-pill stat-blue">Claude API · Generativ AI</span>
+                <span class="stat-pill" style="background:rgba(251,191,36,0.12);color:#fbbf24;border:1px solid rgba(251,191,36,0.3)">🚧 Work in progress</span>
+              </div>
+            </div>
+            <h3>Strikke-Oppskriftsgenerator</h3>
+            <p>
+              Interaktivt verktøy som genererer unike strikkemønstre algoritmisk — nordiske stjerner,
+              diamanter, chevron og mer — og bruker Claude AI til å produsere komplette norske
+              oppskrifter med materialliste, mål og steg-for-steg instruksjoner.
+            </p>
+            <div class="project-tags">
+              <span class="tag" style="--tc:#3776AB">Python</span>
+              <span class="tag" style="--tc:#FF4B4B">Streamlit</span>
+              <span class="tag" style="--tc:#10B981">Algoritmisk</span>
+              <span class="tag" style="--tc:#F59E0B">Matplotlib</span>
+            </div>
+            <div style="margin-top:1rem">
+              <a href="https://richardmcmillan.no/strikk/" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.875rem;padding:0.5rem 1.25rem">
+                Prøv appen →
+              </a>
+            </div>
+          </article>
+
+          <!-- Treningsapp -->
+          <article class="project-card reveal-on-scroll">
+            <div class="proj-meta">
+              <span class="proj-num">04</span>
+            </div>
+            <h3>Treningslogger & Progresjonssporer</h3>
+            <p>
+              Fullverdig treningsapp bygget med vanilla JS. Logger styrke- og kondisjonsøkter,
+              viser ukessammendrag, styrkeprogresjonsgrafer, øvelsesbibliotek med PR-sporing,
+              heatmap-kalender og regelbaserte treningsinnsikter.
+            </p>
+            <div class="project-tags">
+              <span class="tag" style="--tc:#F7DF1E">JavaScript</span>
+              <span class="tag" style="--tc:#7fd7ff">Chart.js</span>
+              <span class="tag" style="--tc:#10B981">CSS</span>
+              <span class="tag" style="--tc:#8B5CF6">localStorage</span>
+            </div>
+            <div style="margin-top:1rem">
+              <a href="https://richardmcmillan.no/trening/" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.875rem;padding:0.5rem 1.25rem">
+                Prøv appen →
+              </a>
+            </div>
           </article>
 
           <!-- Arduino -->
           <article class="project-card reveal-on-scroll">
             <div class="proj-meta">
-              <span class="proj-num">04</span>
+              <span class="proj-num">05</span>
             </div>
             <h3>Arduino – Fartsmåler med mikrokontroller</h3>
             <p>
@@ -306,6 +331,39 @@
             </div>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- OM MEG -->
+    <section id="about">
+      <div class="container">
+        <div class="section-tag">Introduksjon</div>
+        <h2 class="section-heading">Om meg</h2>
+
+        <div class="about-layout">
+          <div class="about-photo-wrap">
+            <img src="test.jpg" alt="Bilde av Richard McMillan" class="about-photo">
+          </div>
+
+          <div class="about-body">
+            <p>
+              Hei! Jeg heter Richard McMillan, er 29 år gammel, og kommer fra Norge.
+              Jeg tok først en bachelorgrad i historie fra Høgskulen i Volda,
+              før interessen for teknologi tok over og jeg bestemte meg for å bytte karrierevei.
+              Jeg tok deretter en bachelorgrad i IT og digitalisering/programmering ved Høgskolen i Molde.
+            </p>
+            <p>
+              Jeg brenner for teknologi, spesielt innen automatisering og maskinlæring, og liker å bygge
+              løsninger som gjør hverdagen enklere. På fritiden jobber jeg med egne prosjekter innen AI
+              og prøver å lære noe nytt hver eneste uke.
+            </p>
+            <div class="about-meta">
+              <span class="meta-chip">📍 Norge</span>
+              <span class="meta-chip">🎓 BSc IT &amp; Digitalisering</span>
+              <span class="meta-chip">🤖 Automatisering &amp; AI</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
